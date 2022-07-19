@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+/* 초기화 */
+h2,h2,h3,h4,h5,h6{
+    font: 100%/1 'Montserrat', sans-serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a,span{
+    display: inline-block;
+}
+
+/* 상속 */
+body{
+    font: 14px/1.5 'Montserrat', sans-serif;;
+    color: #888;
+}
+
+/* 공통 */
+.clear::after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.block{
+    display: block;
+}
+
+.hide{
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.inner{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.more_view{
+   text-align: left;
+   color: white;
+   width: 124px;
+   padding-left: 18px;
+   line-height: 40px;
+   background: #2496cc url(../images/arrow.png) no-repeat right 12px center;
+   border: 1px solid #2496cc;
+   background-size: 14px;
+}
+
+.more_view:hover{
+    background-color: transparent;
+    border: 1px solid #051c48;
+    color: #051c48;
+    background-image: url(../images/arrow_blue.png);
+}
+
+/* layout start */
+#header{
+    background: radial-gradient(circle at 20%, #48c2db,#153779,#313332);
+}
+
+#header .inner{
+    display: flex;   
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+}
+
+#header .inner .logo a>img{
+    width: 130px;
+    margin-top: 10px;
+}
+
+#header .inner nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+     color: white;
+}
+
+#header .inner nav ul.gnb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+
+}
+
+#header .inner nav ul.gnb>li{
+    margin: 0 5px;
+}
+
+#header .inner nav ul.gnb>li>a{
+    padding: 0 10px;
+}
+
+#header .inner nav ul.gnb>li:last-child>a{
+    color: #2496cc;
+    font-weight: 600;
+}
+
+#header .gnb .lnb, div.mask{
+    display: none;
+}
+
+
+#header .inner nav .right_btn a:first-child{
+    text-align: center;
+    width: 138px;
+    line-height: 38px;
+    background-color: #2496cc;
+    margin-right: 5px;
+}
+
+#header .inner nav .right_btn a:nth-child(2){
+    text-align: center;
+    width: 152px;
+    line-height: 38px;
+    border:1px solid #2496cc;
+    box-sizing: border-box;
+}
+
+#header .inner nav .right_btn>span{
+    text-align: center;
+    /* font-size: 38px; */
+}
+
+.material-symbols-outlined{
+    font-size: 38px;
+}
+
+/* visual start */
+#visual{
+    height: 834px;
+    background: url(../images/visual_02.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+#visual .inner{
+    position: relative;
+}
+
+#visual .inner h2{
+    padding: 50px 0 5px;
+    color: #051c48;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+#visual .inner p{
+    color: #051c48;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 70px;
+}
+
+#visual .inner a{
+    margin-bottom: 390px;
+
+}
+
+#visual .inner img{
+    display: block;
+}
+
+#visual .page_nation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 790px;
+    left: 50%;
+    width: 110px;
+    margin-left: -55px;
+    text-indent: -9999px;
+}
+#visual .page_nation>span{
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        border-radius: 50%;
+}
+
+#visual .page_nation>span:nth-child(2){
+        background-color: transparent;
+        border: 3px solid #fff;
+
+}
+
+#visual>p:nth-child(2){
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 0;
+    background-color:#2496cc ;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+
+#visual>p:last-child{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -20px;
+    background-color:#2496cc ;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* main start */
+
+/* sec01 */
+#content .sec01{
+    text-align: center;
+    padding: 90px 0;
+}
+
+#content .sec01>.inner{
+    text-align: center;
+    /* height: 540px; */
+    background: url(../images/background.png) no-repeat right -45px top;
+    background-size: 950px;
+    margin-bottom: 50px;
+}
+
+#content .sec01>.inner h2{
+    font-size: 42px;
+    font-weight: 600;
+    color: #051c48;
+    margin-bottom: 12px;
+}
+#content .sec01>.inner p{
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+#content .sec01>.inner>img{
+    width: 200px;
+    margin-bottom: 50px;
+}
+
+
+#content .sec01>.inner>div>img:first-child{
+    width: 300px;
+    display: inline-block;
+}
+#content .sec01>.inner>div>img:last-child{
+    width: 500px;
+    display: inline-block;
+}
+
+
+/* sec02 */
+.sec02>.inner>.sec02_what{
+    background: url(../images/menu_what.jpg) no-repeat center top 70%;
+    width: 100%;
+    text-align: center;
+    height: 234px;
+}
+
+.sec02>.inner>.sec02_what>h2{
+    font-size: 40px;
+    padding-top: 65px;
+    color: #fff;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.sec02>.inner>.sec02_what>p{
+    font-size: 18px;
+    color: white;
+    margin-bottom: 12px;
+}
+.sec02>.inner>.sec02_what>a:hover{
+    border: 1px solid white;
+    color: white;
+    background-image: url(../images/arrow.png);
+}
+
+.sec02>.inner>.sec02_ex{
+    background: url(../images/menu_interior.jpg) no-repeat center top 70%;
+    width: 100%;
+    text-align: center;
+    height: 234px;
+}
+
+.sec02>.inner>.sec02_ex>h3{
+    font-size: 40px;
+    padding-top: 65px;
+    color: #fff;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.sec02>.inner>.sec02_ex>p{
+    font-size: 18px;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.sec02>.inner>.sec02_ex>a{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.sec02>.inner>.sec02_ex>a:hover{
+    background-color: #fff;   
+}
+
+.sec02>.inner>.sec02_gall{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.sec02>.inner>.sec02_left{
+    width: 700px;
+    height: 552px;
+    background: url(../images/menu_rangergallery.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.sec02>.inner>.sec02_right{
+    width: 700px;
+}
+
+
