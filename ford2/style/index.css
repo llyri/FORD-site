@@ -56,7 +56,7 @@ body {
   transition: 0.3s;
 }
 
-.more_btn:hover{
+.more_btn:hover {
   /* transform: scale(1.04); */
   background-color: #1304f1;
   border: 1px solid #1304f1;
@@ -112,7 +112,7 @@ body {
 }
 
 /* header */
-#header{
+#header {
   position: relative;
   z-index: 100;
   box-shadow: 1px 1px 15px rgba(50, 50, 50, 0.1);
@@ -144,13 +144,13 @@ body {
   font-size: 17px;
 }
 
-#header .inner .nav .gnb>li>a:hover{
+#header .inner .nav .gnb>li>a:hover {
   color: #1304f1;
   /* font-size: 18px; */
   font-weight: 500;
 }
 
-#header .inner .nav .gnb .lnb{
+#header .inner .nav .gnb .lnb {
   position: absolute;
   top: 63px;
   left: -274px;
@@ -158,27 +158,27 @@ body {
   display: none;
 }
 
-#header .inner .nav .gnb .lnb .lnb_list{
+#header .inner .nav .gnb .lnb .lnb_list {
   display: flex;
   justify-content: center;
   background-color: #f4f4f4;
-  color: #777 ;
+  color: #777;
   border-top: 1px solid #ccc;
   border-bottom: 0.5px solid #ccc;
 }
 
-#header .inner .nav .gnb .lnb .lnb_list>li>a{
+#header .inner .nav .gnb .lnb .lnb_list>li>a {
   padding: 20px 15px;
   margin: 0 10px;
 }
 
-#header .inner .nav .gnb .lnb .lnb_list>li>a:hover{
+#header .inner .nav .gnb .lnb .lnb_list>li>a:hover {
   color: #002060;
   font-weight: 500;
   position: relative;
 }
 
-#header .inner .nav .gnb .lnb .lnb_list>li>a:hover::after{
+#header .inner .nav .gnb .lnb .lnb_list>li>a:hover::after {
   content: "";
   display: block;
   width: 100%;
@@ -189,29 +189,30 @@ body {
   left: 0;
 }
 
-#header .inner .nav .gnb .lnb .lnb_content{
+#header .inner .nav .gnb .lnb .lnb_content {
   display: flex;
   justify-content: space-around;
-  background: #fff; 
+  background: #fff;
   padding: 40px 100px;
 }
 
-#header .inner .nav .gnb .lnb .lnb_content strong{
-   font-size: 20px;
-   font-weight: 500;
+#header .inner .nav .gnb .lnb .lnb_content strong {
+  font-size: 20px;
+  font-weight: 500;
 }
 
-#header .inner .nav .gnb .lnb .lnb_content img{
+#header .inner .nav .gnb .lnb .lnb_content img {
   margin-bottom: 10px;
 }
 
-#header .inner .nav .gnb .lnb .lnb_btn{
+#header .inner .nav .gnb .lnb .lnb_btn {
   border-top: 1px solid #ccc;
   background-color: #fff;
   text-align: center;
   padding: 20px 0;
 }
-#header .inner .nav .gnb .lnb .lnb_btn>a{
+
+#header .inner .nav .gnb .lnb .lnb_btn>a {
   width: 160px;
   padding: 15px 10px;
 }
@@ -231,7 +232,7 @@ body {
   font-weight: 400;
 }
 
-#header .inner .header_btn a:nth-child(2):hover{
+#header .inner .header_btn a:nth-child(2):hover {
   color: #1304f1;
 }
 
@@ -242,23 +243,26 @@ body {
 
 /* visual */
 #visual {
-  width: 100vw;
+  max-width: 1920px;
+  min-width: 1000px;
   position: relative;
-  margin-bottom: 100px;
-  height: 867px;
+  overflow-x: hidden;
+  margin: 0 auto;
 }
 
 #visual ul {
   display: flex;
+  width: 300%;
 }
 
 #visual>ul>li {
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
 #visual>ul>li>img {
-  width: 100vw;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #visual>ul>li .visual_text {
@@ -312,7 +316,7 @@ body {
   width: 1000px;
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 100px;
   transform: translate(-50%);
   border-radius: 10px;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
@@ -354,6 +358,10 @@ body {
 #visual .visual_pannel>.pannel_text span {
   font-weight: 400;
   margin-right: 26px;
+}
+
+#visual div.margin {
+  height: 250px;
 }
 
 /* section 공통 */
@@ -442,16 +450,13 @@ section .inner>p {
   position: relative;
 }
 
-.po_re:hover>.sec_img{
+.po_re:hover>.sec_img {
   overflow: hidden;
 }
 
-.po_re:hover>.sec_img>img{
+.po_re:hover>.sec_img>img {
   width: 100%;
-  transition:0.8s;
-}
-
-.po_re:hover>.sec_img>img{
+  transition: 0.8s;
   transform: scale(1.1);
 }
 
@@ -471,7 +476,7 @@ section .inner>p {
   transition: 1s;
 }
 
-#section03 .img_content .img_txt i{
+#section03 .img_content .img_txt i {
   margin-left: 10px;
   margin-top: 2px;
 }
@@ -512,23 +517,58 @@ section .inner>p {
   /* text-align: left; */
 }
 
-#section04 .inner .find_left fieldset>div:nth-child(1){
+#section04 .inner .find_left fieldset>div:nth-child(1) {
   margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#section04 .inner .find_left fieldset>div:nth-child(1) input{
-  width: 16px;
-  height: 16px;
-  border:1px solid #bbb;
-  margin: 0;
+#section04 .inner .find_left fieldset>div:nth-child(1) input {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bbb;
+  background-color: white;
+  margin: 4px 0 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-#section04 .inner .find_left fieldset>div:nth-child(1) label{
+#section04 .inner .find_left fieldset>div:nth-child(1) i{
+  position: absolute;
+  left: -22px;
+  top: 4px;
+  display: none;
+}
+
+/* #section04 .inner .find_left fieldset>div:nth-child(1) input[type="checkbox"]:checked::before {
+  content: "*";
+  display: none;
+} */
+
+/* #section04 .inner .find_left fieldset>div:nth-child(1)>span{
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bbb;
+  background-color: white;
+  margin: 4px 0 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#section04 .inner .find_left fieldset>div:nth-child(1)>span>i{
+  display: block;
+}
+ */
+
+
+#section04 .inner .find_left fieldset>div:nth-child(1) label {
   font-size: 16px;
   margin-left: 5px;
+  position: relative;
 }
-#section04 .inner .find_left fieldset>div:nth-child(2) input{
+
+#section04 .inner .find_left fieldset>div:nth-child(2) input {
   width: 400px;
   padding: 18px 20px;
   box-sizing: border-box;
@@ -538,16 +578,17 @@ section .inner>p {
   font-size: 14px;
 }
 
-#section04 .inner .find_left fieldset>div:nth-child(2) input::placeholder{
+#section04 .inner .find_left fieldset>div:nth-child(2) input::placeholder {
   color: #bbb;
 }
-#section04 .inner .find_left fieldset>div:nth-child(2) i{
+
+#section04 .inner .find_left fieldset>div:nth-child(2) i {
   color: #aaa;
   font-size: 30px;
   margin-left: 10px;
 }
 
-#section04 .inner .find_left fieldset>div:nth-child(3){
+#section04 .inner .find_left fieldset>div:nth-child(3) {
   font-size: 14px;
 }
 
@@ -557,8 +598,8 @@ section .inner>p {
   margin-bottom: 0;
 }
 
-#section05>.inner>span{
-    padding: 40px 0;
+#section05>.inner>span {
+  padding: 40px 0;
 }
 
 #section05 .desc {
@@ -580,7 +621,7 @@ section .inner>p {
   align-items: center;
 }
 
-#footer .footer_search fieldset i{
+#footer .footer_search fieldset i {
   margin-right: 10px;
   color: #aaa;
   font-size: 24px;
@@ -592,7 +633,7 @@ section .inner>p {
   padding: 10px;
   box-sizing: border-box;
   background-color: transparent;
-  border:1px solid #ddd;
+  border: 1px solid #ddd;
   border-radius: 6px;
   color: #ddd;
 }

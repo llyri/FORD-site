@@ -82,6 +82,7 @@
                 </div>
             </div>
         </header>
+        <!-- <div class="visual_wrap"> -->
         <div id="visual">
             <ul>
                 <li>
@@ -125,6 +126,7 @@
                     <a href="#"><i class="fa-solid fa-angle-right"></i></a>
                 </div>
             </div>
+            <div class="margin"></div>
         </div>
         <main id="main">
             <section id="section01">
@@ -216,11 +218,16 @@
                 <form action="#">
                     <fieldset>
                         <div>
-                            <input type="radio" id="userEx">
-                            <label for="userEx">전시장 찾기</label>
-                            <input type="radio" id="userCenter" style="margin-left: 30px;">
-                            <label for="userCenter">서비스 센터 찾기</label>
+                            <!-- <span class="checkbox"><i class="fa-solid fa-check"></i></span> -->
+                            <input type="checkbox"
+                                id="userEx" name="typeSelect">
+                            <label for="userEx"><i class="fa-solid fa-check"></i>전시장 찾기</label>
+                            <!-- <span class="checkbox"><i class="fa-solid fa-check"></i></span> -->
+                            <input type="checkbox" id="userCenter" name="typeSelect" style="margin-left: 30px;">
+                            <label for="userCenter"><i class="fa-solid fa-check"></i>서비스 센터 찾기</label>
+
                         </div>
+
                         <div>
                             <label for="userSearch" class="blind">검색</label>
                             <input type="text" id="userSearch" placeholder="검색어를 입력하세요">
