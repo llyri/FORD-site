@@ -98,13 +98,6 @@ body {
   font-weight: 300;
 }
 
-#header_line .inner>ul>li>a:hover,
-#header_line .inner>ul>li>a:focus,
-#header_line .inner>ul>li>a:active{
-  color: #eee;
-  font-weight: 400;
-}
-
 #header_line .inner>ul>li>a::after {
   content: "";
   display: block;
@@ -310,14 +303,29 @@ body {
   margin: 0 auto;
 }
 
+#visual .mask{
+  width: 1920px;
+  max-width: 1920px;
+  min-width: 1000px;
+  position: relative;
+  height: 728px;
+}
+
+#visual .gall {
+  width: 600%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 #visual ul {
   display: flex;
-  width: 300%;
 }
 
 #visual ul>li {
-  width: 100%;
   position: relative;
+  flex: 1;
 }
 
 #visual ul>li>img {
@@ -367,6 +375,35 @@ body {
   color: #002060;
 }
 
+/* visual_nav */
+#visual div.visual_nav{
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#visual div.visual_nav>span{
+  background-color: #eaeaea;
+  width: 14px;
+  height: 14px;
+  text-indent: -9999px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+/* visual prev_next  */
+
+#visual div.prev_next>a:first-child{
+  position: absolute;
+  top: 35%; 
+  left: 2%;
+}
+
+#visual div.prev_next>a:last-child{
+  position: absolute;
+  top: 35%;
+  right: 2%;
+}
 
 #visual .visual_pannel {
   background-color: white;
@@ -381,7 +418,6 @@ body {
   transform: translate(-50%);
   border-radius: 10px;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
 }
 
 #visual div.slideUp{
@@ -830,29 +866,4 @@ dd {
 
 #footer .footer_bottom .inner .bottom_right dl:last-child {
   margin-bottom: 10px;
-}
-
-/* plugin */
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
-  bottom: 155px!important;
-}
-
-span.swiper-pagination-bullet{
-  width: 12px;
-  height: 12px;
-  background-color: #f4f4f4;
-  opacity: 1;
-  margin: 0 6px!important;
-  border: 1px solid #f4f4f4;
-
-}
-
-span.swiper-pagination-bullet.swiper-pagination-bullet-active{
-  width: 40px;
-  height: 13px;
-  background-color: #002060;
-  opacity: 1;
-  border: 1px solid #f4f4f4;
-  border-radius: 10px;
-
 }
