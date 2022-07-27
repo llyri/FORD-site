@@ -1,12 +1,12 @@
 
 //화살표 움직임
-for (i = 0; i < 6; i++) {
+for (let i = 0; i < 6; i++) {
   let wrapper_w = $('#section03 .img_txt:eq(' + i + ')').width();
   let span_w = $('#section03 .img_txt:eq(' + i + ')>span').innerWidth();
   let i_w = $('#section03 .img_txt:eq(' + i + ')>i')
 
   $('.po_re:eq(' + i + ')').hover(function () {
-    i_w.css('position', 'relative').stop().animate({ left: wrapper_w - span_w - 30 }, 'easeInOutQuart');
+    i_w.css('position', 'relative').stop().animate({ left: wrapper_w - span_w - 30 }, '0.8s', 'easeInCubic');
   }
     , function () {
       i_w.stop().css({ left: 0 });
@@ -45,10 +45,39 @@ $(window).on('scroll', function () {
 
 })
 
+$('.overlay').on('click', function () {
+  $('#header .inner .nav .gnb .lnb').hide();
+  $(this).hide();
+})
+
 //lnb
-$('#header .inner .nav .gnb>li:eq(0)>a').on('click', function () {
-  $('#header .inner .nav .gnb .lnb').slideToggle(400);
-  $('.overlay').toggle();
+$('#header .inner .nav .gnb>li>a').on('click', function () {
+  $('#header .inner .nav .gnb>li>a').removeClass('active');
+  let index = $('#header .inner .nav .gnb>li>a').index(this);
+
+  if (index == 0) {
+    let is_hidden = $('#header .inner .nav .gnb .lnb').is(":hidden");
+    if (is_hidden) {
+      $('#header .inner .nav .gnb .lnb').slideDown(400);
+      $(this).addClass('active')
+    } else {
+      $('#header .inner .nav .gnb .lnb').slideUp(200);
+    }
+    $('.overlay').toggle();
+  } else {
+    $('#header .inner .nav .gnb .lnb').hide();
+    $('.overlay').hide();
+  }
+
+
+  // if($(this).attr("clicked") != true){
+  //   $('#header .inner .nav .gnb .lnb').slideDown(400);  
+  //   $(this).attr("clicked", false);
+  // }else{
+  //   $('#header .inner .nav .gnb .lnb').hide();
+  //   $(this).attr("clicked", true);
+  // }
+  //   $('.overlay').toggle();
 })
 
 // visual
@@ -72,6 +101,7 @@ $('#header .inner .nav .gnb>li:eq(0)>a').on('click', function () {
 //     targetX = -1920 * i
 //   })
 // }
+// 100vw로하면됨
 
 // visual plugin
 var swiper = new Swiper(".mySwiper", {
@@ -83,3 +113,7 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
   },
 });
+
+$('.sec05').click(function(){
+  $('.desc_main').slideToggle();
+})
